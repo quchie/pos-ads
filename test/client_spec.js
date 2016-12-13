@@ -5,7 +5,7 @@ import reducer from '../common/routes/Client/reducer'
 // Remove this
 import fakeDB from '../server/fakeClientsDB.js'
 
-describe('Post Reducer', () => {
+describe('Client Reducer', () => {
   const initialState = {
     lastFetched: null,
     isLoading: false,
@@ -38,10 +38,8 @@ describe('Post Reducer', () => {
 
   it('should handle LOAD_POST_SUCCESS', () => {
     const post = {
-      name: '128sd043hd',
-      title: 'Cloth Talk Part I',
-      slug: 'cloth-talk-part-i',
-      content: 'Khaled Ipsum is a major key to success.'
+      name:'default',
+      pricingRules: []
     }
     const currentTime = Date.now()
     const action = {
@@ -56,8 +54,8 @@ describe('Post Reducer', () => {
       lastFetched: currentTime,
       isLoading: false,
       error: null,
-      title: 'Cloth Talk Part I',
-      content: 'Khaled Ipsum is a major key to success.'
+      name:'default',
+      pricingRules: []
     }
 
     const nextState = reducer(initialState, action)
@@ -76,8 +74,8 @@ describe('Post Reducer', () => {
       lastFetched: null,
       isLoading: false,
       error: error,
-      title: '',
-      content: ''
+      name:'',
+      pricingRules: []
     }
 
     const nextState = reducer(initialState, action)

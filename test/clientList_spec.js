@@ -1,11 +1,11 @@
 import chai, { expect } from 'chai'
 import * as types from '../common/constants'
-import reducer from '../common/routes/PostList/reducer'
+import reducer from '../common/routes/ClientList/reducer'
 
 // Remove this
-import fakeDB from '../server/fakeDB.js'
+import fakeDB from '../server/fakeClientsDB.js'
 
-describe('PostList Reducer', () => {
+describe('ClientList Reducer', () => {
   const initialState = {
     lastFetched: null,
     isLoading: false,
