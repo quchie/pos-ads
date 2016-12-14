@@ -144,17 +144,17 @@ const Home = React.createClass({
 
             {this.state.value != 'select' &&
             <div>
-             <h2 className={css(styles.header)}>Select Product</h2>
-            <button onClick={this.addClassic} value="classic"> Classic Ad </button>
-            <button onClick={this.addStandout} value="standout"> Standout Ad​ </button>
-            <button onClick={this.addPremium} value="premium"> Premium Ad​ </button>
-            <ul>
-              {this.state.cart.map((item, i) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-            <br/>
-            <h2>Total Price: ${this.state.price}</h2>
+              <h2 className={css(styles.header)}>Select Product</h2>
+              <button onClick={this.addClassic} value="classic" class="classic"> Classic Ad </button>
+              <button onClick={this.addStandout} value="standout" class="standout"> Standout Ad​ </button>
+              <button onClick={this.addPremium} value="premium" class="premium"> Premium Ad​ </button>
+              <ul>
+                {this.state.cart.map((item, i) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <br/>
+              <h2>Total Price: <div class="total">${this.state.price}</div></h2>
             </div>
             }
           </div>

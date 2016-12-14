@@ -34,7 +34,7 @@ describe('API', () => {
     }
 
     chai.request(server)
-      .get(`/api/v0/clients/${post.slug}`)
+      .get(`/api/v0/clients/${post.name}`)
       .end((err, res) => {
         expect(res.status).to.equal(200)
         expect(res).to.be.json

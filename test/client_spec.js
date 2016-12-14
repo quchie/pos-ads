@@ -36,49 +36,4 @@ describe('Client Reducer', () => {
     expect(nextState).to.deep.equal(expectedNextState)
   })
 
-  it('should handle LOAD_POST_SUCCESS', () => {
-    const post = {
-      name:'default',
-      pricingRules: []
-    }
-    const currentTime = Date.now()
-    const action = {
-      type: types.LOAD_POST_SUCCESS,
-      payload: post,
-      meta: {
-        lastFetched: currentTime
-      }
-    }
-
-    const expectedNextState = {
-      lastFetched: currentTime,
-      isLoading: false,
-      error: null,
-      name:'default',
-      pricingRules: []
-    }
-
-    const nextState = reducer(initialState, action)
-    expect(nextState).to.deep.equal(expectedNextState)
-  })
-
-  it('should handle LOAD_POST_FAILURE', () => {
-    const error = new Error('Invalid request')
-    const action = {
-      type: types.LOAD_POST_FAILURE,
-      payload: error,
-      error: true
-    }
-
-    const expectedNextState = {
-      lastFetched: null,
-      isLoading: false,
-      error: error,
-      name:'',
-      pricingRules: []
-    }
-
-    const nextState = reducer(initialState, action)
-    expect(nextState).to.deep.equal(expectedNextState)
-  })
 })
