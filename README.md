@@ -1,6 +1,6 @@
 # Sample POS for Ads
 [![Build Status](https://travis-ci.org/quchie/pos-ads.svg?branch=master)](https://travis-ci.org/quchie/pos-ads)
-[![Coverage Status](https://coveralls.io/repos/github/quchie/pos-ads/badge.svg?branch=master)](https://coveralls.io/github/quchie/pos-ads?branch=master)
+[![Test Coverage](https://codeclimate.com/github/quchie/pos-ads/badges/coverage.svg)](https://codeclimate.com/github/quchie/pos-ads/coverage)
 ### Getting started
 ```bash
 git clone https://github.com/quchie/pos-ads.git 
@@ -10,6 +10,6 @@ npm start
 
 # Open localhost:5000
 
-#To check test
+#To run test
 npm test
 ```

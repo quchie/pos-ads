@@ -13,6 +13,9 @@ addons:
 cache:
   directories:
     - node_modules
+addons:
+  code_climate:
+    repo_token: fa05bd35325176210c592ca03a6ae955ab7e934e2b22a048191a91d9201fde62
 after_success:
   - npm run coverage
   - codeclimate-test-reporter < lcov.info
